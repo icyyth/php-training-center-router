@@ -16,4 +16,11 @@ class HealthController
             'version' => '1.0.0'
         ]);
     }
+    public function check(): void {
+        Response::json(200, [
+            'status' => 'ok',
+            'message' => 'Training Center is running',
+            'time' => date('Y-m-d H:i:s')
+        ]);
+     }
 }
