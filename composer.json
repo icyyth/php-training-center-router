@@ -1,0 +1,10 @@
+{
+    "name": "student/php_training_center_router",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
