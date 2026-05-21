@@ -32,7 +32,11 @@ class Router
         $allowedMethods = $this->getAllowedMethodsForPath($path);
 
         if (!empty($allowedMethods)) {
-            Response::methodNotAllowed($allowedMethods);
+            Response::methodNotAllowed([
+                'status' => 405,
+                'message' => 'Method Not Allowed',
+                'allowedMethods' => $allowedMethods,
+            ]);
         }
 
         Response::notFound('404 Not Found');
